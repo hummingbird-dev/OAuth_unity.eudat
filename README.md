@@ -25,7 +25,9 @@ URL's.
 Now we are sending the user to the authorization server and type the following into the Browser's address bar:
 
 ``` html
-https://unity.eudat-aai.fz-juelich.de/oauth2-as/oauth2-authz?client_id=myClientName&redirect_uri=http://localhost/unity/callback&scope=email&response_type=code&state=14N8PON3olyCEV3G75xXTdrY28MsX8UVPFczM4XB
+https://unity.eudat-aai.fz-juelich.de/oauth2-as/oauth2-authz?client_id=myClientName&
+redirect_uri=http://localhost/unity/callback&scope=email&
+response_type=code&state=14N8PON3olyCEV3G75xXTdrY28MsX8UVPFczM4XB
 ```
 
 
