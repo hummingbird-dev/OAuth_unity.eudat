@@ -99,7 +99,7 @@ The answer now looks like the following:
 With the access token we can now get information about the user:
 
 ``` shell
-curl -H "Authorization: Bearer 1k80Sxh79GsjEjtxwR-zp6rXywjdczs8flREO5xfo8U" 
+curl -H "Authorization: Bearer bPwVaYhOzTl__dnAll5o9QtTABxw-661SQiqDbcVBBo" 
 https://unity.eudat-aai.fz-juelich.de/oauth2/userinfo
 ```
 
