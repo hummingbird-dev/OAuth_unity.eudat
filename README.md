@@ -11,14 +11,14 @@ I recommend to read first/additionally the official documentation
 
 First we go to
 [https://unity.eudat-aai.fz-juelich.de/home/home](https://unity.eudat-aai.fz-juelich.de/home/home)
-and click on the top left link "Register a new account". From the
+and click on the top right link "Register a new account". From the
 pop-up menu we choose "OAuth 2.0 Client Registration Form". Now we
 fill the respective fields, whereas it is important to set "OAuth
 client allowed grants" to "authorizationCode". Be sure to remember the
 Password, we will need it later. The "OAuth client return URL" can be
 specified now or later. After successful registration we can login to
 the account and do things like changing the password or setting return
-URL's.
+URL's. Accordingly we logout.
 
 ## Redirect to authorization server
 
@@ -46,7 +46,7 @@ to submit personal information to the client.
 We are now redirected back to our "redirect_uri" and find the following in the Browser's address bar:
 
 ``` html
-http://localhost/testing/unity/callback?
+http://localhost/unity/callback?
 code=PpgFJJJdvIw3uv_X62SS2awhUWfIM7B5EM12mrupVHU&
 state=14N8PON3olyCEV3G75xXTdrY28MsX8UVPFczM4XB
 ```
@@ -82,7 +82,7 @@ And now fire the request with cURL.
 curl -H "Authorization: Basic $token_b64" -d "
 client_id=$client_id_b64&
 client_secret=$client_secret_b64&
-redirect_uri=http://localhost/unity/github/callback&
+redirect_uri=http://localhost/unity/callback&
 code=PpgFJJJdvIw3uv_X62SS2awhUWfIM7B5EM12mrupVHU&
 grant_type=authorization_code"
 https://unity.eudat-aai.fz-juelich.de/oauth2/token
@@ -95,6 +95,8 @@ The answer now looks like the following:
 "refresh_token":"Fj1vffVU7MuR3B8XvmF18PlCSjulD7K2rIJQawzQ6pA",
 "token_type":"Bearer"}
 ```
+
+## Get user information
 
 With the access token we can now get information about the user:
 
