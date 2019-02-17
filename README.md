@@ -84,11 +84,34 @@ client_id=$client_id_b64&
 client_secret=$client_secret_b64&
 redirect_uri=http://localhost/unity/github/callback&
 code=PpgFJJJdvIw3uv_X62SS2awhUWfIM7B5EM12mrupVHU&
-grant_type=authorization_code
+grant_type=authorization_code"
+https://unity.eudat-aai.fz-juelich.de/oauth2/token
 ```
 
+The answer now looks like the following:
 
+``` shell
+{"access_token":"bPwVaYhOzTl__dnAll5o9QtTABxw-661SQiqDbcVBBo",
+"refresh_token":"Fj1vffVU7MuR3B8XvmF18PlCSjulD7K2rIJQawzQ6pA",
+"token_type":"Bearer"}
+```
 
+With the access token we can now get information about the user:
+
+``` shell
+curl -H "Authorization: Bearer 1k80Sxh79GsjEjtxwR-zp6rXywjdczs8flREO5xfo8U" 
+https://unity.eudat-aai.fz-juelich.de/oauth2/userinfo
+```
+
+The response is then something like:
+
+``` shell
+{"sub":"244xxdbf-f665-404c-a29e-72403edczzb4",
+"email":"sebastian.mieruch@gmx.de"}
+```
+
+Finally we have the email of the user and can login the user into our
+system or create e.g. a new user.
 
 
 
