@@ -75,7 +75,7 @@ client_secret_b64=`echo $client_secret | base64`
 
 token_b64=`echo -ne "$client_id:$client_secret" | base64 --wrap 0`
 
-redirect_uri=redirect_uri=http://localhost/unity/callback
+redirect_uri=http://localhost/unity/callback
 
 code=PpgFJJJdvIw3uv_X62SS2awhUWfIM7B5EM12mrupVHU
 ```
