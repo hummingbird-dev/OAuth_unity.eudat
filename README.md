@@ -79,13 +79,7 @@ token_b64=`echo -ne "$client_id:$client_secret" | base64 --wrap 0`
 And now fire the request with cURL.
 
 ``` shell
-curl -H "Authorization: Basic $token_b64" -d "\
-client_id=$client_id_b64&\
-client_secret=$client_secret_b64&\
-redirect_uri=http://localhost/unity/callback&\
-code=PpgFJJJdvIw3uv_X62SS2awhUWfIM7B5EM12mrupVHU&\
-grant_type=authorization_code"\
-https://unity.eudat-aai.fz-juelich.de/oauth2/token
+curl -H "Authorization: Basic $token_b64" -d "client_id=$client_id_b64&client_secret=$client_secret_b64&redirect_uri=http://localhost/unity/callback&code=PpgFJJJdvIw3uv_X62SS2awhUWfIM7B5EM12mrupVHU&grant_type=authorization_code" https://unity.eudat-aai.fz-juelich.de/oauth2/token
 ```
 
 The answer now looks like the following:
