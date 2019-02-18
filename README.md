@@ -75,7 +75,7 @@ client_secret_b64=`echo $client_secret | base64`
 
 token_b64=`echo -ne "$client_id:$client_secret" | base64 --wrap 0`
 
-redirect_url=redirect_uri=http://localhost/unity/callback
+redirect_uri=redirect_uri=http://localhost/unity/callback
 
 code=PpgFJJJdvIw3uv_X62SS2awhUWfIM7B5EM12mrupVHU
 ```
@@ -99,8 +99,7 @@ The answer now looks like the following:
 With the access token we can now get information about the user:
 
 ``` shell
-curl -H "Authorization: Bearer bPwVaYhOzTl__dnAll5o9QtTABxw-661SQiqDbcVBBo" 
-https://unity.eudat-aai.fz-juelich.de/oauth2/userinfo
+curl -H "Authorization: Bearer bPwVaYhOzTl__dnAll5o9QtTABxw-661SQiqDbcVBBo" https://unity.eudat-aai.fz-juelich.de/oauth2/userinfo
 ```
 
 The response is then something like:
